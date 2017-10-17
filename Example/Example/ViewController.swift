@@ -19,18 +19,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        gradientableView.set(options: GradientableOptions(colors: [.yellow, .cyan]))
+        gradientableView.set(animation: GradientableAnimation(to: [.yellow, .cyan], duration: 10.0))
+        
         let options = GradientableOptions(colors: [.red, .blue])
-        gradientableView.set(options: options)
         gradientableButton.set(options: options)
         gradientableCustomView.set(options: options)
         
         perform(#selector(colorAnimation), with: nil, afterDelay: 2.0)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientableButton.layer.cornerRadius = gradientableButton.frame.height / 2.0
+        gradientableCustomView.layer.cornerRadius = gradientableCustomView.frame.height / 2.0
+    }
+    
     // MARK: - Private
     @objc func colorAnimation() {
         let animation = GradientableAnimation(to: [.blue, .yellow])
-        gradientableView.set(animation: animation)
         gradientableButton.set(animation: animation)
         gradientableCustomView.set(animation: animation)
         
@@ -39,7 +46,6 @@ class ViewController: UIViewController {
     
     @objc func changeLocation() {
         let options = GradientableOptions(locations: [0.2, 0.7])
-        gradientableView.set(options: options)
         gradientableButton.set(options: options)
         gradientableCustomView.set(options: options)
         
@@ -48,7 +54,6 @@ class ViewController: UIViewController {
 
     @objc func changeDirection() {
         let options = GradientableOptions(direction: .topLeftToBottomRight)
-        gradientableView.set(options: options)
         gradientableButton.set(options: options)
         gradientableCustomView.set(options: options)
     }

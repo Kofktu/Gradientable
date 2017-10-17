@@ -20,7 +20,7 @@ public extension Gradientable where Self: UIView {
         UIView.classInit
         gradientLayer = CAGradientLayer()
         gradientLayer?.frame = bounds
-        layer.addSublayer(gradientLayer!)
+        layer.insertSublayer(gradientLayer!, at: 0)
     }
     
     public func set(options: GradientableOptions) {
