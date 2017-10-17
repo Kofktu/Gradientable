@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C35E215C1F95B93700F1D2E2 /* Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E215B1F95B93700F1D2E2 /* Gradientable.swift */; };
+		C35E215E1F95BCF900F1D2E2 /* UIView+Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */; };
 		C3EC75161F95B8A0005350D7 /* Gradientable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EC750C1F95B89F005350D7 /* Gradientable.framework */; };
 		C3EC751B1F95B8A0005350D7 /* GradientableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC751A1F95B8A0005350D7 /* GradientableTests.swift */; };
 		C3EC751D1F95B8A0005350D7 /* Gradientable.h in Headers */ = {isa = PBXBuildFile; fileRef = C3EC750F1F95B89F005350D7 /* Gradientable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C35E215B1F95B93700F1D2E2 /* Gradientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradientable.swift; sourceTree = "<group>"; };
+		C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradientable.swift"; sourceTree = "<group>"; };
 		C3EC750C1F95B89F005350D7 /* Gradientable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gradientable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EC750F1F95B89F005350D7 /* Gradientable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gradientable.h; sourceTree = "<group>"; };
 		C3EC75101F95B89F005350D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C35E215A1F95B92B00F1D2E2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C35E215B1F95B93700F1D2E2 /* Gradientable.swift */,
+				C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C3EC75021F95B89F005350D7 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		C3EC750E1F95B89F005350D7 /* Gradientable */ = {
 			isa = PBXGroup;
 			children = (
+				C35E215A1F95B92B00F1D2E2 /* Classes */,
 				C3EC750F1F95B89F005350D7 /* Gradientable.h */,
 				C3EC75101F95B89F005350D7 /* Info.plist */,
 			);
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					C3EC750B1F95B89F005350D7 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					C3EC75141F95B89F005350D7 = {
@@ -196,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35E215E1F95BCF900F1D2E2 /* UIView+Gradientable.swift in Sources */,
+				C35E215C1F95B93700F1D2E2 /* Gradientable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +351,7 @@
 		C3EC75211F95B8A0005350D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -348,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.homefactory.Gradientable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,6 +375,7 @@
 		C3EC75221F95B8A0005350D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -378,6 +398,7 @@
 		C3EC75241F95B8A0005350D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLVLNTBFM4;
 				INFOPLIST_FILE = GradientableTests/Info.plist;
@@ -392,6 +413,7 @@
 		C3EC75251F95B8A0005350D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLVLNTBFM4;
 				INFOPLIST_FILE = GradientableTests/Info.plist;
