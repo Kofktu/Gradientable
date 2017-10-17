@@ -9,11 +9,8 @@
 import Foundation
 import UIKit
 
-public struct GradientableOptions {
-    
-    var colors: [UIColor]?
-    
-    
+protocol GradientableAppliable {
+    func apply(layer: CAGradientLayer?)
 }
 
 public protocol Gradientable {}
@@ -26,51 +23,28 @@ public extension Gradientable where Self: UIView {
         layer.addSublayer(gradientLayer!)
     }
     
-    public func set(colors: [UIColor], animated: Bool = false, duration: TimeInterval = 2.0) {
+    public func set(options: GradientableOptions) {
         guard let _ = gradientLayer else {
             fatalError("setupGradientable() is required.")
         }
         
-        let colorSet = colors.map { $0.cgColor }
-        
-        if animated {
-            let animation = CABasicAnimation(keyPath: "colors")
-            
-            let delegate = GradientableDelegate.shared
-            delegate.onAnimationFinished = { [weak self] in
-                self?.gradientLayer?.colors = colorSet
-            }
-            
-            animation.delegate = delegate
-            animation.duration = duration
-            animation.toValue = colorSet
-            animation.fillMode = kCAFillModeForwards
-            animation.isRemovedOnCompletion = false
-            gradientLayer?.add(animation, forKey: nil)
-        } else {
-            gradientLayer?.colors = colors.map { $0.cgColor }
-        }
-        
+        options.apply(layer: gradientLayer)
     }
     
-}
-
-class GradientableDelegate: NSObject, CAAnimationDelegate {
-    static let shared = GradientableDelegate()
-    var onAnimationFinished: (() -> Void)?
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if flag {
-            onAnimationFinished?()
+    public func set(animation: GradientableAnimation) {
+        guard let _ = gradientLayer else {
+            fatalError("setupGradientable() is required.")
         }
+        
+        animation.apply(layer: gradientLayer)
     }
+    
 }
 
 extension UIView {
     
     struct AssociatedKeys {
         static var gradientLayer = "gradientLayer"
-        static var gradientableDelegate = "gradientableDelegate"
     }
     
     var gradientLayer: CAGradientLayer? {

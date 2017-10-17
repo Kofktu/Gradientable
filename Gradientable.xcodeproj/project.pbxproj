@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C35E215C1F95B93700F1D2E2 /* Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E215B1F95B93700F1D2E2 /* Gradientable.swift */; };
 		C35E215E1F95BCF900F1D2E2 /* UIView+Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */; };
+		C3DF488C1F95D424000BEFDC /* GradientableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF488B1F95D424000BEFDC /* GradientableOptions.swift */; };
+		C3DF488E1F95D455000BEFDC /* GradientableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF488D1F95D455000BEFDC /* GradientableAnimation.swift */; };
 		C3EC75161F95B8A0005350D7 /* Gradientable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EC750C1F95B89F005350D7 /* Gradientable.framework */; };
 		C3EC751B1F95B8A0005350D7 /* GradientableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC751A1F95B8A0005350D7 /* GradientableTests.swift */; };
 		C3EC751D1F95B8A0005350D7 /* Gradientable.h in Headers */ = {isa = PBXBuildFile; fileRef = C3EC750F1F95B89F005350D7 /* Gradientable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		C35E215B1F95B93700F1D2E2 /* Gradientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradientable.swift; sourceTree = "<group>"; };
 		C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradientable.swift"; sourceTree = "<group>"; };
+		C3DF488B1F95D424000BEFDC /* GradientableOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientableOptions.swift; sourceTree = "<group>"; };
+		C3DF488D1F95D455000BEFDC /* GradientableAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientableAnimation.swift; sourceTree = "<group>"; };
 		C3EC750C1F95B89F005350D7 /* Gradientable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gradientable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EC750F1F95B89F005350D7 /* Gradientable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gradientable.h; sourceTree = "<group>"; };
 		C3EC75101F95B89F005350D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				C35E215B1F95B93700F1D2E2 /* Gradientable.swift */,
+				C3DF488B1F95D424000BEFDC /* GradientableOptions.swift */,
+				C3DF488D1F95D455000BEFDC /* GradientableAnimation.swift */,
 				C35E215D1F95BCF900F1D2E2 /* UIView+Gradientable.swift */,
 			);
 			path = Classes;
@@ -211,6 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DF488E1F95D455000BEFDC /* GradientableAnimation.swift in Sources */,
+				C3DF488C1F95D424000BEFDC /* GradientableOptions.swift in Sources */,
 				C35E215E1F95BCF900F1D2E2 /* UIView+Gradientable.swift in Sources */,
 				C35E215C1F95B93700F1D2E2 /* Gradientable.swift in Sources */,
 			);
