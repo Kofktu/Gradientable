@@ -27,6 +27,14 @@ public struct GradientableOptions: GradientableAppliable {
     var locations: [NSNumber]?
     var direction: GradientableOptionsDirection?
     
+    public init(colors: [UIColor]? = nil,
+                locations: [NSNumber]? = nil,
+                direction: GradientableOptionsDirection? = nil) {
+        self.colors = colors
+        self.locations = locations
+        self.direction = direction
+    }
+    
     func apply(layer: CAGradientLayer?) {
         layer?.colors = colors?.flatMap { $0.cgColor } ?? layer?.colors
         layer?.locations = locations ?? layer?.locations

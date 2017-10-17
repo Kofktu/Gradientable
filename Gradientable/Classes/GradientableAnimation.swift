@@ -20,7 +20,7 @@ public struct GradientableAnimation: GradientableAppliable {
     var to: [UIColor]
     var duration: TimeInterval = 0.4
     
-    init(to: [UIColor],
+    public init(to: [UIColor],
          duration: TimeInterval = 0.4,
          from: [UIColor]? = nil) {
         self.to = to
