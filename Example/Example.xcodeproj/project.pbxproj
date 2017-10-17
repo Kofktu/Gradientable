@@ -13,6 +13,8 @@
 		C35E21381F95B8C400F1D2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35E21371F95B8C400F1D2E2 /* Assets.xcassets */; };
 		C35E213B1F95B8C400F1D2E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35E21391F95B8C400F1D2E2 /* LaunchScreen.storyboard */; };
 		C35E21461F95B8C500F1D2E2 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E21451F95B8C500F1D2E2 /* ExampleTests.swift */; };
+		C35E21611F95C13800F1D2E2 /* Gradientable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E21561F95B8CA00F1D2E2 /* Gradientable.framework */; };
+		C35E21621F95C13800F1D2E2 /* Gradientable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C35E21561F95B8CA00F1D2E2 /* Gradientable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,28 @@
 			remoteGlobalIDString = C3EC75151F95B89F005350D7;
 			remoteInfo = GradientableTests;
 		};
+		C35E21631F95C13800F1D2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35E21501F95B8CA00F1D2E2 /* Gradientable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C3EC750B1F95B89F005350D7;
+			remoteInfo = Gradientable;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C35E21651F95C13800F1D2E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C35E21621F95C13800F1D2E2 /* Gradientable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C35E212D1F95B8C400F1D2E2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35E21611F95C13800F1D2E2 /* Gradientable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,10 +155,12 @@
 				C35E21291F95B8C400F1D2E2 /* Sources */,
 				C35E212A1F95B8C400F1D2E2 /* Frameworks */,
 				C35E212B1F95B8C400F1D2E2 /* Resources */,
+				C35E21651F95C13800F1D2E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C35E21641F95C13800F1D2E2 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -268,6 +294,11 @@
 			target = C35E212C1F95B8C400F1D2E2 /* Example */;
 			targetProxy = C35E21421F95B8C500F1D2E2 /* PBXContainerItemProxy */;
 		};
+		C35E21641F95C13800F1D2E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gradientable;
+			targetProxy = C35E21631F95C13800F1D2E2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -400,6 +431,7 @@
 		C35E214B1F95B8C500F1D2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLVLNTBFM4;
@@ -416,6 +448,7 @@
 		C35E214C1F95B8C500F1D2E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLVLNTBFM4;
