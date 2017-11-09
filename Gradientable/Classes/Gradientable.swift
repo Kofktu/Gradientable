@@ -16,27 +16,26 @@ protocol GradientableAppliable {
 public protocol Gradientable {}
 public extension Gradientable where Self: UIView {
     
-    public func setupGradientable() {
-        UIView.classInit
-        gradientLayer = CAGradientLayer()
-        gradientLayer?.frame = bounds
-        layer.insertSublayer(gradientLayer!, at: 0)
-    }
-    
     public func set(options: GradientableOptions) {
-        guard let _ = gradientLayer else {
-            fatalError("setupGradientable() is required.")
+        if gradientLayer == nil {
+            setupGradientable()
         }
-        
         options.apply(layer: gradientLayer)
     }
     
     public func set(animation: GradientableAnimation) {
-        guard let _ = gradientLayer else {
-            fatalError("setupGradientable() is required.")
+        if gradientLayer == nil {
+            setupGradientable()
         }
-        
         animation.apply(layer: gradientLayer)
+    }
+    
+    // MARK: - Private
+    private func setupGradientable() {
+        UIView.classInit
+        gradientLayer = CAGradientLayer()
+        gradientLayer?.frame = bounds
+        layer.insertSublayer(gradientLayer!, at: 0)
     }
     
 }
