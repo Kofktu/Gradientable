@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         gradientableView.set(options: GradientableOptions(colors: [.yellow, .cyan]))
-        gradientableView.set(animation: GradientableAnimation(to: [.yellow, .cyan], duration: 10.0))
+        gradientableView.set(animation: GradientableAnimation(to: [.yellow, .red], duration: 5.0))
         
         let options = GradientableOptions(colors: [.red, .blue])
         gradientableButton.set(options: options)
@@ -67,10 +67,4 @@ class Button: GradientableButton {
 }
 
 class CustomView: UIView, Gradientable {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupGradientable()
-    }
-    
 }
